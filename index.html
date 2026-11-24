@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Campus<span>Hub</span></h2>
+        </div>
+
+        <div class="profile">
+            <div class="profile-img">HV</div>
+            <h3>Harsha Vardhan</h3>
+            <p>STU2026001</p>
+        </div>
+
+        <nav class="navigation">
+            <a href="#dashboard" class="active">▦ Dashboard</a>
+            <a href="#attendance">◷ Attendance</a>
+            <a href="#grades">▤ Marks & Grades</a>
+            <a href="#timetable">▦ Timetable</a>
+            <a href="#subjects">▣ Subjects</a>
+            <a href="#notifications">♢ Notifications</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Academic Year</p>
+            <h4>2026 - 2027</h4>
+            <p>Semester 1</p>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="dashboard">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div class="header-left">
+                <label for="menu-toggle" class="menu-btn">☰</label>
+                <div>
+                    <h1>Student Dashboard</h1>
+                    <p>Welcome back, Harsha! Here's your academic overview.</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <span class="notification-icon">♧</span>
+                <div class="header-user">
+                    <div class="small-avatar">HV</div>
+                    <span>Harsha</span>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Quick Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon purple">▣</div>
+                <div>
+                    <p>Total Subjects</p>
+                    <h2>6</h2>
+                    <span>Enrolled courses</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <div>
+                    <p>Attendance</p>
+                    <h2>87.5%</h2>
+                    <span>Good standing</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">★</div>
+                <div>
+                    <p>Current GPA</p>
+                    <h2>8.7</h2>
+                    <span>Out of 10.0</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">◷</div>
+                <div>
+                    <p>Classes Attended</p>
+                    <h2>105</h2>
+                    <span>Out of 120 classes</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Attendance and Profile -->
+        <section class="overview-grid">
+
+            <!-- Attendance -->
+            <div class="card" id="attendance">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Attendance Overview</h2>
+                        <p>Your overall class attendance</p>
+                    </div>
+                    <span class="tag success">Good</span>
+                </div>
+
+                <div class="attendance-content">
+
+                    <div class="attendance-circle">
+                        <div class="circle-inner">
+                            <h2>87.5%</h2>
+                            <p>Attendance</p>
+                        </div>
+                    </div>
+
+                    <div class="attendance-details">
+
+                        <div class="attendance-item">
+                            <span class="dot green-dot"></span>
+                            <div>
+                                <p>Present</p>
+                                <h3>105 Classes</h3>
+                            </div>
+                        </div>
+
+                        <div class="attendance-item">
+                            <span class="dot red-dot"></span>
+                            <div>
+                                <p>Absent</p>
+                                <h3>15 Classes</h3>
+                            </div>
+                        </div>
+
+                        <div class="attendance-item">
+                            <span class="dot blue-dot"></span>
+                            <div>
+                                <p>Total Classes</p>
+                                <h3>120 Classes</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="progress-info">
+                    <span>Attendance Progress</span>
+                    <strong>87.5%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+            <!-- Student Profile -->
+            <div class="card student-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Student Profile</h2>
+                        <p>Your personal information</p>
+                    </div>
+                    <span class="tag success">Active</span>
+                </div>
+
+                <div class="student-details">
+
+                    <div class="large-avatar">HV</div>
+
+                    <h3>Harsha Vardhan</h3>
+                    <p class="student-course">B.Tech - CSE (AI & ML)</p>
+
+                    <div class="profile-info">
+                        <div>
+                            <span>Roll Number</span>
+                            <strong>STU2026001</strong>
+                        </div>
+
+                        <div>
+                            <span>Semester</span>
+                            <strong>1st Semester</strong>
+                        </div>
+
+                        <div>
+                            <span>Department</span>
+                            <strong>Computer Science</strong>
+                        </div>
+
+                        <div>
+                            <span>Academic Year</span>
+                            <strong>2026 - 2027</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Marks and Notifications -->
+        <section class="content-grid">
+
+            <!-- Marks Table -->
+            <div class="card" id="grades">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Marks & Grades</h2>
+                        <p>Your latest academic performance</p>
+                    </div>
+                    <span class="tag purple-tag">Semester 1</span>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Internal</th>
+                                <th>External</th>
+                                <th>Total</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Mathematics</td>
+                                <td>24</td>
+                                <td>68</td>
+                                <td>92</td>
+                                <td><span class="grade">A+</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Python Programming</td>
+                                <td>23</td>
+                                <td>65</td>
+                                <td>88</td>
+                                <td><span class="grade">A</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Digital Electronics</td>
+                                <td>22</td>
+                                <td>64</td>
+                                <td>86</td>
+                                <td><span class="grade">A</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Physics</td>
+                                <td>20</td>
+                                <td>62</td>
+                                <td>82</td>
+                                <td><span class="grade">B+</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>English</td>
+                                <td>24</td>
+                                <td>70</td>
+                                <td>94</td>
+                                <td><span class="grade">A+</span></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="overall-result">
+                    <span>Overall GPA</span>
+                    <strong>8.7 / 10</strong>
+                </div>
+
+            </div>
+
+            <!-- Notifications -->
+            <div class="card" id="notifications">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Important reminders</p>
+                    </div>
+                    <span class="tag urgent">3 New</span>
+                </div>
+
+                <div class="notification-list">
+
+                    <div class="notification-item">
+                        <div class="notification-symbol red-bg">!</div>
+                        <div>
+                            <h4>Mid Examination</h4>
+                            <p>Mid examinations begin on December 10.</p>
+                            <span>Today · 10:30 AM</span>
+                        </div>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-symbol orange-bg">₹</div>
+                        <div>
+                            <h4>Fee Reminder</h4>
+                            <p>Semester fee payment deadline is approaching.</p>
+                            <span>Yesterday · 2:00 PM</span>
+                        </div>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-symbol blue-bg">i</div>
+                        <div>
+                            <h4>Assignment Submission</h4>
+                            <p>Submit your Python assignment before Friday.</p>
+                            <span>Nov 22 · 11:00 AM</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Weekly Timetable -->
+        <section class="card timetable-section" id="timetable">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Weekly Timetable</h2>
+                    <p>Your weekly class schedule</p>
+                </div>
+                <span class="tag purple-tag">Semester 1</span>
+            </div>
+
+            <div class="table-wrapper">
+
+                <table class="timetable">
+
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>9:00 - 10:00</td>
+                            <td>Mathematics</td>
+                            <td>Python</td>
+                            <td>Physics</td>
+                            <td>English</td>
+                            <td>Mathematics</td>
+                        </tr>
+
+                        <tr>
+                            <td>10:00 - 11:00</td>
+                            <td>Python</td>
+                            <td>Physics</td>
+                            <td>Mathematics</td>
+                            <td>Python</td>
+                            <td>Digital Electronics</td>
+                        </tr>
+
+                        <tr>
+                            <td>11:00 - 12:00</td>
+                            <td>English</td>
+                            <td>Mathematics</td>
+                            <td>Python</td>
+                            <td>Physics</td>
+                            <td>English</td>
+                        </tr>
+
+                        <tr>
+                            <td>12:00 - 1:00</td>
+                            <td colspan="5" class="break">Lunch Break</td>
+                        </tr>
+
+                        <tr>
+                            <td>1:00 - 2:00</td>
+                            <td>Physics</td>
+                            <td>English</td>
+                            <td>Digital Electronics</td>
+                            <td>Mathematics</td>
+                            <td>Python Lab</td>
+                        </tr>
+
+                        <tr>
+                            <td>2:00 - 3:00</td>
+                            <td>Digital Electronics</td>
+                            <td>Python Lab</td>
+                            <td>English</td>
+                            <td>Digital Electronics</td>
+                            <td>Python Lab</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="timetable-note">
+                Note: Room and faculty information can be updated
+                according to the official college timetable.
+            </p>
+
+        </section>
+
+        <!-- Enrolled Subjects -->
+        <section class="subjects-section" id="subjects">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Enrolled Subjects</h2>
+                    <p>Courses you are currently studying</p>
+                </div>
+                <span class="tag purple-tag">6 Subjects</span>
+            </div>
+
+            <div class="subject-grid">
+
+                <div class="subject-card">
+                    <div class="subject-icon purple">M</div>
+                    <h3>Mathematics</h3>
+                    <p>Dr. Ramesh Kumar</p>
+                    <div class="subject-meta">
+                        <span>MAT101</span>
+                        <span>4 Credits</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div class="subject-icon green">P</div>
+                    <h3>Python Programming</h3>
+                    <p>Prof. Suresh Rao</p>
+                    <div class="subject-meta">
+                        <span>CSE102</span>
+                        <span>4 Credits</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div class="subject-icon orange">D</div>
+                    <h3>Digital Electronics</h3>
+                    <p>Prof. Anil Kumar</p>
+                    <div class="subject-meta">
+                        <span>ECE103</span>
+                        <span>3 Credits</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div class="subject-icon blue">P</div>
+                    <h3>Engineering Physics</h3>
+                    <p>Dr. Priya Sharma</p>
+                    <div class="subject-meta">
+                        <span>PHY104</span>
+                        <span>3 Credits</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div class="subject-icon pink">E</div>
+                    <h3>English</h3>
+                    <p>Prof. Lakshmi Devi</p>
+                    <div class="subject-meta">
+                        <span>ENG105</span>
+                        <span>2 Credits</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div class="subject-icon yellow">L</div>
+                    <h3>Python Programming Lab</h3>
+                    <p>Prof. Suresh Rao</p>
+                    <div class="subject-meta">
+                        <span>CSE106</span>
+                        <span>2 Credits</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Announcements -->
+        <section class="card announcements-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Announcements</h2>
+                    <p>Latest updates from your college</p>
+                </div>
+            </div>
+
+            <div class="announcement-item">
+                <div>
+                    <span class="tag purple-tag">Academic</span>
+                    <h3>New Semester Examination Schedule</h3>
+                    <p>The examination timetable for Semester 1
+                       will be published soon. Students are advised
+                       to check the academic portal regularly.</p>
+                    <span class="announcement-date">November 24, 2026</span>
+                </div>
+            </div>
+
+            <div class="announcement-item">
+                <div>
+                    <span class="tag success">Events</span>
+                    <h3>Annual Technical Fest</h3>
+                    <p>Registrations are open for the upcoming
+                       technical fest. Interested students can
+                       register through the college portal.</p>
+                    <span class="announcement-date">November 20, 2026</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 CampusHub Student Portal. All rights reserved.</p>
+            <p>Designed using HTML & CSS</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

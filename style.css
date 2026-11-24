@@ -1,0 +1,1077 @@
+
+/* =========================================
+   1. CSS VARIABLES
+========================================= */
+
+:root {
+    --primary: #6558e8;
+    --primary-light: #eeecff;
+
+    --background: #f5f6fb;
+    --white: #ffffff;
+
+    --text-dark: #25283b;
+    --text-light: #85899d;
+
+    --green: #20b486;
+    --red: #ed6262;
+    --orange: #f5a623;
+    --blue: #4389e8;
+
+    --border: #ececf2;
+
+    --sidebar-width: 250px;
+
+    --radius: 14px;
+    --card-shadow: 0 4px 20px rgba(30, 35, 90, 0.04);
+}
+
+/* =========================================
+   2. RESET AND GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* =========================================
+   3. SIDEBAR
+========================================= */
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: var(--white);
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid var(--border);
+    z-index: 100;
+}
+
+.logo {
+    margin-bottom: 35px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--text-dark);
+}
+
+.profile {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-img {
+    width: 75px;
+    height: 75px;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 12px;
+
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.profile h3 {
+    font-size: 16px;
+}
+
+.profile p {
+    color: var(--text-light);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.navigation a {
+    padding: 12px 14px;
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--text-light);
+
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    background: var(--primary-light);
+    padding: 18px;
+
+    border-radius: 12px;
+}
+
+.sidebar-bottom p {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.sidebar-bottom h4 {
+    color: var(--primary);
+    margin: 5px 0;
+}
+
+/* =========================================
+   4. MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 30px;
+    min-width: 0;
+}
+
+/* =========================================
+   5. TOP HEADER
+========================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    font-weight: 750;
+}
+
+.topbar p {
+    color: var(--text-light);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+
+    background: var(--white);
+    border-radius: 10px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 20px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.small-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    display: grid;
+    place-items: center;
+
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* =========================================
+   6. QUICK STATISTICS
+========================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: var(--white);
+
+    padding: 22px 18px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--card-shadow);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+.purple {
+    background: #eeecff;
+    color: #6558e8;
+}
+
+.green {
+    background: #e4f8f0;
+    color: #20b486;
+}
+
+.orange {
+    background: #fff1df;
+    color: #f5a623;
+}
+
+.blue {
+    background: #e6f0ff;
+    color: #4389e8;
+}
+
+.pink {
+    background: #ffe9f1;
+    color: #e66b9a;
+}
+
+.yellow {
+    background: #fff6d9;
+    color: #c89a16;
+}
+
+.stat-card p {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.stat-card h2 {
+    font-size: 23px;
+    margin: 3px 0;
+}
+
+.stat-card span {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+/* =========================================
+   7. COMMON CARD STYLES
+========================================= */
+
+.card {
+    background: var(--white);
+
+    padding: 23px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--card-shadow);
+
+    min-width: 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+    gap: 12px;
+}
+
+.section-heading h2 {
+    font-size: 17px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.tag {
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.success {
+    color: var(--green);
+    background: #e4f8f0;
+}
+
+.urgent {
+    color: var(--red);
+    background: #ffeded;
+}
+
+.purple-tag {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* =========================================
+   8. ATTENDANCE AND PROFILE GRID
+========================================= */
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.attendance-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+/* Attendance circular meter */
+
+.attendance-circle {
+    width: 155px;
+    height: 155px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        var(--green) 0% 87.5%,
+        #edf0f5 87.5% 100%
+    );
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+}
+
+.circle-inner {
+    width: 120px;
+    height: 120px;
+
+    background: var(--white);
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-inner h2 {
+    font-size: 25px;
+    color: var(--green);
+}
+
+.circle-inner p {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.attendance-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.attendance-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.attendance-item p {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.attendance-item h3 {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}
+
+.green-dot {
+    background: var(--green);
+}
+
+.red-dot {
+    background: var(--red);
+}
+
+.blue-dot {
+    background: var(--blue);
+}
+
+/* Progress Bar */
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 25px;
+    margin-bottom: 9px;
+
+    font-size: 12px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+
+    background: #edf0f5;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 87.5%;
+    height: 100%;
+
+    background: var(--green);
+    border-radius: 10px;
+}
+
+/* =========================================
+   9. STUDENT PROFILE CARD
+========================================= */
+
+.student-details {
+    text-align: center;
+}
+
+.large-avatar {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    margin: 0 auto 10px;
+}
+
+.student-details h3 {
+    font-size: 17px;
+}
+
+.student-course {
+    color: var(--text-light);
+    font-size: 12px;
+    margin: 4px 0 20px;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    text-align: left;
+}
+
+.profile-info div {
+    padding: 10px;
+
+    background: #f8f8fc;
+    border-radius: 9px;
+}
+
+.profile-info span {
+    display: block;
+
+    font-size: 10px;
+    color: var(--text-light);
+}
+
+.profile-info strong {
+    font-size: 11px;
+}
+
+/* =========================================
+   10. MARKS AND NOTIFICATIONS
+========================================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+/* Table */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 450px;
+}
+
+th {
+    background: #f8f8fc;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: left;
+
+    padding: 13px 10px;
+}
+
+td {
+    padding: 15px 10px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.grade {
+    background: #e4f8f0;
+    color: var(--green);
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.overall-result {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    font-size: 13px;
+}
+
+.overall-result strong {
+    color: var(--primary);
+}
+
+/* Notifications */
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.notification-symbol {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    display: grid;
+    place-items: center;
+
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.red-bg {
+    background: #ffeded;
+    color: var(--red);
+}
+
+.orange-bg {
+    background: #fff1df;
+    color: var(--orange);
+}
+
+.blue-bg {
+    background: #e6f0ff;
+    color: var(--blue);
+}
+
+.notification-item h4 {
+    font-size: 13px;
+}
+
+.notification-item p {
+    color: var(--text-light);
+    font-size: 11px;
+    margin: 4px 0;
+}
+
+.notification-item span {
+    color: #a0a3b1;
+    font-size: 10px;
+}
+
+/* =========================================
+   11. TIMETABLE
+========================================= */
+
+.timetable-section {
+    margin-bottom: 25px;
+}
+
+.timetable {
+    min-width: 700px;
+}
+
+.timetable th,
+.timetable td {
+    text-align: center;
+    padding: 16px 12px;
+}
+
+.timetable td {
+    font-size: 11px;
+}
+
+.timetable th:first-child,
+.timetable td:first-child {
+    background: #f8f8fc;
+    font-weight: bold;
+}
+
+.break {
+    background: #fff6df;
+    color: #c18b14;
+    font-weight: bold;
+}
+
+.timetable-note {
+    color: var(--text-light);
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+/* =========================================
+   12. SUBJECT CARDS
+========================================= */
+
+.subjects-section {
+    margin-bottom: 25px;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.subject-card {
+    background: var(--white);
+
+    padding: 20px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--card-shadow);
+
+    transition: transform 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+}
+
+.subject-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.subject-card h3 {
+    font-size: 14px;
+}
+
+.subject-card p {
+    font-size: 11px;
+    color: var(--text-light);
+
+    margin-top: 5px;
+}
+
+.subject-meta {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--border);
+
+    padding-top: 13px;
+    margin-top: 17px;
+
+    font-size: 10px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* =========================================
+   13. ANNOUNCEMENTS
+========================================= */
+
+.announcements-section {
+    margin-bottom: 25px;
+}
+
+.announcement-item {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.announcement-item:last-child {
+    border-bottom: none;
+}
+
+.announcement-item h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.announcement-item p {
+    color: var(--text-light);
+    font-size: 12px;
+    margin: 7px 0;
+}
+
+.announcement-date {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* =========================================
+   14. FOOTER
+========================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+/* =========================================
+   15. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview-grid,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   16. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        left: -260px;
+        transition: left 0.3s ease;
+    }
+
+    /* Pure CSS mobile menu toggle */
+
+    #menu-toggle:checked ~ .sidebar {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 18px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+    .topbar p {
+        font-size: 11px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .header-user span {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 15px 10px;
+        gap: 9px;
+    }
+
+    .stat-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .stat-card h2 {
+        font-size: 19px;
+    }
+
+    .stat-card p {
+        font-size: 11px;
+    }
+
+    .attendance-content {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .attendance-circle {
+        width: 135px;
+        height: 135px;
+    }
+
+    .circle-inner {
+        width: 105px;
+        height: 105px;
+    }
+
+    .profile-info {
+        gap: 10px;
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   17. SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 13px;
+    }
+
+    .topbar h1 {
+        font-size: 16px;
+    }
+
+    .topbar p {
+        max-width: 200px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 15px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-details {
+        gap: 12px;
+    }
+
+    .attendance-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle-inner {
+        width: 94px;
+        height: 94px;
+    }
+
+    .profile-info strong {
+        font-size: 10px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+}
